@@ -33,7 +33,9 @@
       }
      ?>
   </div>
+  <a href="view_post_management.php"class="btn btn-primary mt-2 text-white" name="view_post">View/Update Post</a>
 </div>
 <!--end form-->
+
 <?php include("footer.php"); ?>
 <?php include("cdn.php"); ?>
