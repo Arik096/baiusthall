@@ -47,4 +47,4 @@
 
 <!--main end-->
  <?php include("footer.php"); ?>
- <?php include("cdn.php"); ?>
+ 
