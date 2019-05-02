@@ -16,6 +16,22 @@ spl_autoload_register(function($class){
       $stmt->bindParam(":description", $description,PDO::PARAM_STR) ;
       return $stmt->execute();
     }
+    public function update_notice($title,$author,$description,$id){
+      $sql="UPDATE $this->table_name SET title=:title,author=:author,description=:description WHERE id=:id ";
+      $stmt=DB::prepare($sql);
+      $stmt->bindParam(":title",$title,PDO::PARAM_STR) ;
+      $stmt->bindParam(":author", $author,PDO::PARAM_STR) ;
+      $stmt->bindParam(":description", $description,PDO::PARAM_STR) ;
+      $stmt->bindParam(":id", $id,PDO::PARAM_INT) ;
+      return $stmt->execute();
+    }
+
+    public function delete_notice($id){
+      $sql="DELETE FROM $this->table_name WHERE id=:id ";
+      $stmt=DB::prepare($sql);
+      $stmt->bindParam(":id", $id,PDO::PARAM_INT) ;
+      return $stmt->execute();
+    }
 
 
   }
