@@ -1,4 +1,5 @@
 <?php
+  include("lib/session.php");
   if(isset($_REQUEST['post_btn'])){
     if(empty($_REQUEST['title']) || empty($_REQUEST['author']) || empty($_REQUEST['description'])){
       header("location:post_notice.php?msg=Field Must not be empty");
