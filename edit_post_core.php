@@ -1,5 +1,4 @@
 <?php
-include("lib/session.php");
   if(isset($_REQUEST['update_btn'])){
     if(empty($_REQUEST['title']) || empty($_REQUEST['author']) || empty($_REQUEST['description'])){
      $msg="Field must not be Empty";
