@@ -36,7 +36,7 @@
             <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Provost</a>
+            <a class="nav-link" href="view_provost.php">Provost</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Assistant Provost</a>
