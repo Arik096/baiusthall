@@ -1,12 +1,12 @@
 <?php
-
 require_once "lib/pdo_connection.php";
 
 if(isset($_REQUEST['post_btn']))
 {
  try
  {
-  $name = $_REQUEST['name']; //textbox name "txt_name"
+  $name = $_REQUEST['name'];
+  $position = $_REQUEST['position'];
   $desc = $_REQUEST['description'];
   $phn_num = $_REQUEST['phone_number'];
 
@@ -20,6 +20,9 @@ if(isset($_REQUEST['post_btn']))
   if(empty($name)){
    $errorMsg="Please Enter Name";
   }
+  else if(empty($position)){
+   $errorMsg="Please Enter Position";
+  }
   else if(empty($desc)){
    $errorMsg="Please Enter Description";
   }
@@ -29,7 +32,7 @@ if(isset($_REQUEST['post_btn']))
   else if(empty($image_file)){
    $errorMsg="Please Select Image";
   }
-  else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') //check file extension
+  else if($type=="image/jpg" || $type=='image/jpeg') //check file extension
   {
    if(!file_exists($path)) //check file not exist in your upload folder path
    {
@@ -49,13 +52,14 @@ if(isset($_REQUEST['post_btn']))
   }
   else
   {
-   $errorMsg="Upload JPG , JPEG , PNG & GIF File Formate.....CHECK FILE EXTENSION"; //error message file extension
+   $errorMsg="Upload JPG , JPEG  File Formate.....CHECK FILE EXTENSION"; //error message file extension
   }
 
   if(!isset($errorMsg))
   {
-   $insert_stmt=$db->prepare('INSERT INTO tbl_provost(name,description,phn_num,pic) VALUES(:name,:description,:phn_num,:pic)'); //sql insert query
+   $insert_stmt=$db->prepare('INSERT INTO tbl_provost(name,position,description,phn_num,pic) VALUES(:name,:position,:description,:phn_num,:pic)'); //sql insert query
    $insert_stmt->bindParam(':name',$name);
+   $insert_stmt->bindParam(':position',$position);
    $insert_stmt->bindParam(':description',$desc);
    $insert_stmt->bindParam(':phn_num',$phn_num);
    $insert_stmt->bindParam(':pic',$image_file);   //bind all parameter
@@ -63,7 +67,7 @@ if(isset($_REQUEST['post_btn']))
    if($insert_stmt->execute())
    {
 
-    header("refresh:3;provost.php"); //refresh 3 second and redirect to index.php page
+    header("location: provost.php"); //refresh 3 second and redirect to index.php page
    }
   }
  }
