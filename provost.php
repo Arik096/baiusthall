@@ -23,11 +23,14 @@
               <center><img width="20%" style="border-radius:100%;" class="mt-5"  src="management_picture/<?php echo $data['pic'];?>" alt=""></center>
               <div class="text-center">
                 <h2 class="text-dark"><span><?php echo $data['name'];?></span></h2>
+                <h3><?php echo $data['position']; ?></h3>
                 <p><?php echo $data['description']; ?></p>
                 <p><?php echo $data['phn_num']; ?></p>
               </div>
+              <a class="btn btn-primary" href="edit_provost.php?id=<?php echo $data['id'];?>">Edit</a><a class="btn btn-primary ml-3" href="delete_provost.php?id=<?php echo $data['id'];?>">Delete</a>
             </div>
           </div>
+
         </div>
         <?php
 
