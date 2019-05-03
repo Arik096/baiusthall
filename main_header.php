@@ -39,19 +39,19 @@
             <a class="nav-link" href="view_provost.php">Provost</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Assistant Provost</a>
+            <a class="nav-link" href="view_assistant_provost.php">Assistant Provost</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Volenteer</a>
+            <a class="nav-link" href="view_volanteer.php">Volenteer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Management Committe</a>
+            <a class="nav-link" href="view_staff.php">Staff</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Gallery</a>
+            <a class="nav-link" href="#">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">About</a>
+            <a class="nav-link" href="#">About</a>
           </li>
         </ul>
       </div>
