@@ -46,7 +46,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="provost.php">Provost</a>
                   <a class="dropdown-item" href="assistant_provost.php">Assistant Provost</a>
-                  <a class="dropdown-item" href="manager.php">Manager</a>
+                  <a class="dropdown-item" href="manager.php">Staff</a>
                   <a class="dropdown-item" href="volanteers.php">Volanteers</a>
                 </div>
               </li>
