@@ -32,8 +32,8 @@
                   <td><?php echo $data['position']; ?></td>
                   <td><?php echo $data['description']; ?></td>
                   <td><?php echo $data['phn_num']; ?></td>
-                  <td><?php echo $data['pic']; ?></td>
-                  <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                  <td><img width="50" height="50" src="management_picture/<?php echo $data['pic'];?>" alt=""></td>
+                  <td><a class="btn btn-primary" href="edit_assistant_provost.php?id=<?php echo $data['id']?>">Edit</a><a onclick='return confirm("Are you sure")' class="btn btn-primary ml-2" href="delete_assistant_provost.php?id=<?php echo $data['id']?>">Delete</a></td>
                 </tr>
               </tbody>
               <?php
