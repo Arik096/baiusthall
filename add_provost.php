@@ -13,7 +13,11 @@
        <input type="text" class="form-control" name="name">
      </div>
      <div class="form-group">
-       <label for="comment">Notice Description:</label>
+       <label for="exampleInputEmail1">Postion</label>
+       <input type="text" class="form-control" name="position">
+     </div>
+     <div class="form-group">
+       <label for="comment">Description:</label>
        <textarea class="form-control" rows="5" id="comment" name="description"></textarea>
      </div>
      <div class="form-group">
