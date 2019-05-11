@@ -75,62 +75,9 @@
 
             <div id="headingThree">
               <img style="width:160px;" src="img/new_logo.png" alt="">
-               <button class="mx-3 btn btn-outline-info mt-2 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">New Applicant</button>
+               <a href="student_apply.php" class="mx-3 btn btn-outline-info mt-2">New Applicant</a>
             </div>
-                 <!--collapse-->
-                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                   <form>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Student Name</label>
-                       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Student Name">
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Student ID</label>
-                       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Student ID">
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Department</label>
-                       <select>
-                          <option value="" selected>Choose Department</option>
-                          <option value="">CSE</option>
-                          <option value="">EEE</option>
-                          <option value="">CE</option>
-                          <option value="">DBA</option>
-                          <option value="">English</option>
-                          <option value="">LLB</option>
-                        </select>
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Level</label>
-                       <select>
-                          <option value="" selected>Choose Level</option>
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Term</label>
-                       <select>
-                          <option value="" selected>Choose Term</option>
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                     </div>
-                     <div class="form-group">
-                       <label for="exampleInputEmail1">Gender</label>
-                       <select>
-                          <option value="" selected>Choose Gender</option>
-                          <option value="">Male</option>
-                          <option value="">Female</option>
-                        </select>
-                     </div>
-                     <button type="submit" class="btn btn-primary">Submit Application</button>
-                   </form>
-                 </div>
+
                  <!--end collaps-->
 
           </div>
