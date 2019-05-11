@@ -51,7 +51,7 @@
                 </div>
               </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Menu 2</a>
+          <a class="nav-link" href="new_std_application.php">New Application</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
