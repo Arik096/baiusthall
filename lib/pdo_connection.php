@@ -1,4 +1,9 @@
 <?php
+
+//sql211.epizy.com
+//epiz_23793784_baiust_hall
+//epiz_23793784
+//bVVS9kLvr
 $db_host="localhost"; //localhost server
 $db_user="root"; //database username
 $db_password=""; //database password
