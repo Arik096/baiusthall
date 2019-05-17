@@ -24,6 +24,10 @@
     <label for="comment">Notice Description:</label>
     <textarea class="form-control" rows="5" id="comment" name="description"></textarea>
   </div>
+  <!--<div class="form-group">
+    <label for="file">Upload Picture:</label>
+    <input type="file" name="notice_pic" value="">
+  </div>-->
   <button type="submit" class="btn btn-primary" name="post_btn">Post</button>
   </form>
   <div>
