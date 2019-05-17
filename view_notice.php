@@ -5,13 +5,7 @@
     spl_autoload_register(function($class){
         include("class/".$class.".php");
       });
-      $connect=mysqli_connect("localhost","root","");
-      if($connect){
-        $dbselect=mysqli_select_db($connect,"baiust_hall");
-        if($dbselect){
-
-        }
-      }
+      include("lib/mini_conection.php");
       global $get_page;
       if(isset($_GET['action'])){
         $get_page=$_GET['action'];
