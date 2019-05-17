@@ -10,16 +10,16 @@
     <center class="mt-4"><h2><span class="mb-5" style="border:10px solid black; padding:5px; color:#F59B29;">New Applicant</span></h2><center>
     <div class="card mt-4 mb-3 container">
       <div class="card-body">
-          <form class="mt-1 mb-1 w-10" action="" method="post">
-            <input type="text" name="allot" required placeholder="Enter ID">
+          <form class="mt-1 mb-1 w-10" action="new_applicant_approve_core.php" method="post">
+            <input type="text" name="std_id" required placeholder="Enter ID">
             <select id="hall"   name="hall_select" class="mt-1"  required>
-             <option value="" selected>Choose Hall</option>
+             <option selected>Choose Hall</option>
              <option value="1">Male Hall</option>
              <option value="2">Female Hall</option>
              <option value="17">17c Female Hall</option>
            </select>
-            <input type="text" name="allot" required placeholder="Enter Floor/Building">
-            <input id="flat" type="text" name="allot" required placeholder="Enter Flat">
+            <input type="text" name="floor_no" required placeholder="Enter Floor/Building">
+            <input id="flat" type="text" name="flat_no" required placeholder="Enter Flat">
             <script type="text/javascript">
                 $(document).ready(function(){
                   $('#hall').change(function() {
@@ -31,8 +31,8 @@
                   });
                 });
             </script>
-            <input type="text" name="allot" required placeholder="Enter Room">
-            <input type="text" name="allot" required placeholder="Enter Bed">
+            <input type="text" name="room_no" required placeholder="Enter Room">
+            <input type="text" name="bed_no" required placeholder="Enter Bed">
             <input type="submit" onclick='return confirm("Are you sure")' value="AlLot" class="btn btn-primary mt-2">
             </form>
 
@@ -84,18 +84,25 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Available Room's</h5>
-                <select id="available_room"   name="hall_select_show" class="mt-1"  required>
-                 <option value="" selected>Choose Hall</option>
-                 <option value="1">Male Hall</option>
-                 <option value="2">Female Hall</option>
-                 <option value="17">17c Female Hall</option>
-               </select>
-               <div class="show_availavle_room">
-                <form class="" action="index.html" method="post">
-                  <a href="#"></a>
-                  <a href="#"></a>
-              <button type="button" name="button"></button>></a>
+               <div class="">
+                <form class="" action="" method="post">
+                  <button class="btn btn-primary" type="submit" name="btn1">17-C Hall</button>
+                  <button class="btn btn-primary" type="submit" name="btn2">Female Hall</button>
+                  <button class="btn btn-primary" type="submit" name="btn3">Male Hall</button>
                 </form>
+               </div>
+               <div class="">
+                 <?php
+                    if(isset($_POST['btn1'])){
+                      include('available_room_core_17_c.php');
+                    }
+                    if(isset($_POST['btn2'])){
+                      include('available_room_core_female.php');
+                    }
+                    if(isset($_POST['btn3'])){
+                      include('available_room_core_male.php');
+                    }
+                  ?>
                </div>
 
               </div>
