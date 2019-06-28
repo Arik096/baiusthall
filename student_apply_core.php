@@ -23,7 +23,7 @@
     $file_basename=  substr($image_file,0,  strripos($image_file, '.'));//rename file
     $file_ext=  substr($image_file,  strripos($image_file, '.'));
     $f1=$_REQUEST['std_id'].$file_ext;
-    $target_file='application_picture/'.$f1;
+    $target_file=$f1;
     if($type=="image/jpg" || $type=='image/jpeg'){
      if(!file_exists($target_file)){
       if($size < 5000000) //check file size 5MB
