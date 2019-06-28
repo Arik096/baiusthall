@@ -101,10 +101,10 @@
                     if(isset($_POST['btn1'])){
                       include('available_room_core_17_c.php');
                     }
-                    if(isset($_POST['btn2'])){
+                    else if(isset($_POST['btn2'])){
                       include('available_room_core_female.php');
                     }
-                    if(isset($_POST['btn3'])){
+                    else if(isset($_POST['btn3'])){
                       include('available_room_core_male.php');
                     }
                     else{
