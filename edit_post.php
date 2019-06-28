@@ -11,7 +11,7 @@
     ?>
     <!--form-->
     <div class="container mt-3">
-      <form action="" method="post" class="post-form-custom">
+      <form action="" method="post" class="post-form-custom" enctype="multipart/form-data">
       <div class="form-group">
         <label for="exampleInputEmail1">Title</label>
         <input type="text" class="form-control" name="title" value="<?php echo $value['title']; ?>">
@@ -29,6 +29,10 @@
       <div class="form-group">
         <label for="comment">Notice Description:</label>
         <textarea class="form-control" rows="5" id="comment" name="description"><?php echo $value['description']; ?></textarea>
+      </div>
+      <div class="form-group">
+        <label for="file">Update Picture:</label>
+        <input type="file" name="notice_pic" value="">
       </div>
       <button type="submit" class="btn btn-primary" name="update_btn">Update</button>
       </form>
