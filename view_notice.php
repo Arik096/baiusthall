@@ -35,7 +35,13 @@
                 <p class="card-text">
                   <?php echo $value['description']; ?>
                 </p>
-
+                <?php
+                  if($value['pic']){
+                    ?>
+                        <img src="<?php echo $value['pic'] ?>" alt="..." class="img-thumbnail">
+                    <?php
+                  }
+                 ?>
               </div>
             </div>
           </div>
