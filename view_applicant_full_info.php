@@ -15,7 +15,7 @@
   ?>
   <div class="container mt-2">
     <center><div class="mb-4">
-      <img src="<?php echo $data['picture'];?>" height="200" width="200">
+      <img src="<?php echo 'application_picture/'.$data['picture'];?>" height="200" width="200">
     </div></center>
     <div class="row">
       <div class="col-lg-4">
