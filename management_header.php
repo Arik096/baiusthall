@@ -54,6 +54,9 @@
           <a class="nav-link" href="new_std_application.php">New Application</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="view_alloted_student.php">Alloted Student</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
