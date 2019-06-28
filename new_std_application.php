@@ -10,6 +10,11 @@
     <center class="mt-4"><h2><span class="mb-5" style="border:10px solid black; padding:5px; color:#F59B29;">New Applicant</span></h2><center>
     <div class="card mt-4 mb-3 container">
       <div class="card-body">
+        <?php
+          if(isset($_REQUEST["msg"])){
+            echo $_REQUEST["msg"];
+          }
+         ?>
           <form class="mt-1 mb-1 w-10" action="new_applicant_approve_core.php" method="post">
             <input type="text" name="std_id" required placeholder="Enter ID">
             <select id="hall"   name="hall_select" class="mt-1"  required>
@@ -33,7 +38,7 @@
             </script>
             <input type="text" name="room_no" required placeholder="Enter Room">
             <input type="text" name="bed_no" required placeholder="Enter Bed">
-            <input type="submit" onclick='return confirm("Are you sure")' value="AlLot" class="btn btn-primary mt-2">
+            <input type="submit" onclick='return confirm("Are you sure")' value="AlLot" class="btn btn-primary mt-2" name="btn_allot">
             </form>
 
       </div>
@@ -101,6 +106,9 @@
                     }
                     if(isset($_POST['btn3'])){
                       include('available_room_core_male.php');
+                    }
+                    else{
+                      include('available_room_core_17_c.php');
                     }
                   ?>
                </div>
