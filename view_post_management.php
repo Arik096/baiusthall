@@ -47,6 +47,13 @@
                 <div class="mb-2">
                   <a href="edit_post.php?id=<?php echo $value['id'];?>" class="btn btn-primary">Edit</a><a onclick='return confirm("Are you sure")' href="delete_post.php?id=<?php echo $value['id'];?>" class="btn btn-primary ml-2">Delete</a>
                 </div>
+                <?php
+                  if($value['pic']){
+                    ?>
+                        <img src="<?php echo $value['pic'] ?>" alt="..." class="img-thumbnail">
+                    <?php
+                  }
+                 ?>
               </div>
 
             </div>
