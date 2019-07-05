@@ -2,6 +2,7 @@
   $query="SELECT * FROM tbl_std_info NATURAL JOIN tbl_male_hall_1";
   $result=mysqli_query($connect,$query);
  ?>
+  <h3 class="text-center">Male Hall 1</h4>
 <div class="col-lg-12">
   <div class="container mt-4">
     <table class="table table-hover">
@@ -40,7 +41,7 @@
             <td><?php echo $data['room_no']; ?></td>
             <td><?php echo $data['bed_no']; ?></td>
 
-            <td><a class="btn btn-primary" href="#">View Full Info</a><br><a class="btn btn-primary mt-2" href="#">De Allot</a></td>
+            <td><a class="btn btn-primary" href="view_alloted_student_full_description.php?id=<?php echo $data['std_id'];?>">View Full Info</a><br><a class="btn btn-primary mt-2" href="#">De Allot</a></td>
           </tr>
         </tbody>
         <?php
