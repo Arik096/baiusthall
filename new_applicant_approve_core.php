@@ -55,6 +55,7 @@
             $bed=$_REQUEST['bed_no'];
 
             if($table=='1'){
+
               $sql="UPDATE tbl_male_hall_1 SET std_id='$std_id' WHERE floor_no='$floor' AND  flat_no='$flat' AND room_no='$room' AND bed_no='$bed'";
               $result=mysqli_query($connect,$sql);
             }
@@ -63,7 +64,7 @@
               $result=mysqli_query($connect,$sql);
             }
             elseif ($table=='17') {
-              $sql="UPDATE tbl_17_c SET std_id='$std_id' WHERE floor_no='$floor' AND room_no='$room' AND bed_no='$bed'";
+              $sql="UPDATE tbl_17_c SET std_id='$std_id' WHERE building_no='$floor' AND room_no='$room' AND bed_no='$bed'";
               $result=mysqli_query($connect,$sql);
             }
             if($result){
