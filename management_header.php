@@ -57,6 +57,9 @@
           <a class="nav-link" href="view_alloted_student.php">Alloted Student</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="edit_slide_show.php">Slide Show</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
