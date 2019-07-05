@@ -1,100 +1,59 @@
-<div class="col-lg-6">
-  <div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-        </ol>
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider1.jpg" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider one</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
-        <div class="carousel-item ">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider2.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider two</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider3.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider three</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider4.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider four</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
+<?php include("lib/mini_conection.php"); ?>
 
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider5.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider five</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
+ <div class="col-lg-6">
+   <div>
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+           <?php
+               $sql="SELECT * FROM tbl_slide_show";
+               $result=mysqli_query($connect,$sql);
+               $row=mysqli_num_rows($result);
+               $count=0;
+               while($count<$row){
+                 $actives='';
+                 if($count==0){
+                   $actives='active';
+               }
+               ?>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $count; ?>" class="<?php echo $actives; ?>"></li>
+               <?php
+               $count++;
+               }
 
+            ?>
 
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider6.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider six</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
+         </ol>
+         <div class="carousel-inner">
+           <?php
+              $i=0;
+              while($data=mysqli_fetch_assoc($result)){
+                $actives='';
+                if($i==0){
+                  $actives='active';
+                }
+                  ?>
+                  <div class="carousel-item <?php echo $actives; ?>">
+                    <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="<?php echo $data['pic']; ?>">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><?php echo $data['title']; ?></h5>
+                    </div>
+                  </div>
 
+                  <?php
+                  $i++;
+              }
 
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider7.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider seven</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
+            ?>
 
-
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider8.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider eight</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
-
-
-        <div class="carousel-item">
-          <img height="300" class="d-block w-100 custom-slider" id="custom-slider-img" src="img/slider9.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>slider nine</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-          </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-          </a>
-      </div>
-      </div>
-      </div>
-</div>
+         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="sr-only">Next</span>
+           </a>
+       </div>
+       </div>
+       </div>
+ </div>
