@@ -14,8 +14,12 @@ if(isset($_REQUEST['post_btn']))
   $type  = $_FILES["file"]["type"]; //file name "txt_file"
   $size  = $_FILES["file"]["size"];
   $temp  = $_FILES["file"]["tmp_name"];
+  $file_basename=  substr($image_file,0,  strripos($image_file, '.'));//rename file
+  $file_ext=  substr($image_file,  strripos($image_file, '.'));
+  $f1=uniqid().$file_ext;
+  $target_file='management_picture/'.$f1;
 
-  $path="management_picture/".$image_file; //set upload folder path
+  $path="management_picture/".$f1; //set upload folder path
 
   if(empty($name)){
    $errorMsg="Please Enter Name";
@@ -29,7 +33,7 @@ if(isset($_REQUEST['post_btn']))
   else if(empty($phn_num)){
    $errorMsg="Please Enter Phone Number";
   }
-  else if(empty($image_file)){
+  else if(empty($target_file)){
    $errorMsg="Please Select Image";
   }
   else if($type=="image/jpg" || $type=='image/jpeg') //check file extension
@@ -38,7 +42,7 @@ if(isset($_REQUEST['post_btn']))
    {
     if($size < 5000000) //check file size 5MB
     {
-     move_uploaded_file($temp, "management_picture/" .$image_file); //move upload file temperory directory to your upload folder
+     move_uploaded_file($temp, $target_file); //move upload file temperory directory to your upload folder
     }
     else
     {
@@ -62,7 +66,7 @@ if(isset($_REQUEST['post_btn']))
    $insert_stmt->bindParam(':position',$position);
    $insert_stmt->bindParam(':description',$desc);
    $insert_stmt->bindParam(':phn_num',$phn_num);
-   $insert_stmt->bindParam(':pic',$image_file);   //bind all parameter
+   $insert_stmt->bindParam(':pic',$target_file);   //bind all parameter
 
    if($insert_stmt->execute())
    {
