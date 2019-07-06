@@ -1,10 +1,8 @@
-<?php include("session.php"); ?>
-
-
-   <?php include("management_header.php"); ?>
-   <?php
+<?php include("lib/session.php"); ?>
+ <?php include("management_header.php"); ?>
+<?php
       include("add_provost_core.php");
-    ?>
+?>
    <!--form-->
    <div class="container mt-3">
      <form action="" method="post" class="post-form-custom" enctype="multipart/form-data">
@@ -39,4 +37,4 @@
    </div>
 
 
-   <?php include("footer.php"); ?>
+<?php include("footer.php"); ?>
