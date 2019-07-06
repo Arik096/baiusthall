@@ -12,7 +12,7 @@
                     ?>
                     <div class="col-lg-3">
                       <div class="text-center">
-                        <center><img width="20%" style="border-radius:100%;" class="mt-5"  src="management_picture/<?php echo $data['pic'];?>" alt=""></center>
+                        <center><img width="20%" style="border-radius:100%;" class="mt-5"  src="<?php echo $data['pic'];?>" alt=""></center>
                         <h2 class="text-dark"><span><?php echo $data['name'];?></span></h2>
                         <h3><?php echo $data['position']; ?></h3>
                         <p><?php echo $data['description']; ?></p>
