@@ -11,12 +11,13 @@ if(isset($_REQUEST['id']))
  $select_stmt->bindParam(':id',$id);
  $select_stmt->execute();
  $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
- unlink("management_picture/".$row['pic']); //unlink function permanently remove your file
+ unlink($row['pic']); //unlink function permanently remove your file
 
  //delete an orignal record from db
  $delete_stmt = $db->prepare('DELETE FROM tbl_provost WHERE id =:id');
  $delete_stmt->bindParam(':id',$id);
  $delete_stmt->execute();
+
 
  header("Location:provost.php");
 }
