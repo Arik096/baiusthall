@@ -1,5 +1,5 @@
 
-<?php include("session.php"); ?>
+<?php include("lib/session.php"); ?>
 <?php include("management_header.php"); ?>
 <?php
 
