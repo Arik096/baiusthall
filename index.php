@@ -49,16 +49,18 @@
 
                   <!--collapse-->
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <form>
+                    <form action="" method="post" onsubmit="return false;">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Student ID</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Student ID">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" class="form-control" id="std_user_name" aria-describedby="emailHelp" placeholder="Enter Student Username">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="std_password" placeholder="Password">
                       </div>
-                      <button type="submit" class="btn btn-primary">Login</button>
+                      <button type="submit" class="btn btn-primary" id="std_login">Login</button>
+                      <span id="spinner_two"></span>
+                      <div id="msg2" style="color:red"></div>
                     </form>
                   </div>
 
