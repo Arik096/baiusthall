@@ -68,6 +68,9 @@
               $result=mysqli_query($connect,$sql);
             }
             if($result){
+              $create_login="INSERT INTO tbl_std_login(std_id,user_name,password) VALUES('$b','$b','$b')";
+              mysqli_query($connect,$create_login);
+
               $delete_data="DELETE FROM tbl_new_std_info WHERE std_id='$b'";
               mysqli_query($connect,$delete_data);
               rename("application_picture/$b1", "student_picture/$b1");
