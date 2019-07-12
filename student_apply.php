@@ -4,6 +4,14 @@
 <center class="mt-4"><h2><span class="mb-5" style="border:10px solid black; padding:5px; color:#F59B29;">Apply For Seat</span></h2></center>
   <hr class="bg-success mt-5">
 <div class="container mt-4" style="width:80%;border:1px solid black;">
+    <?php
+      if(isset($_REQUEST['msg'])){
+        ?>
+            <div class="container bg-success"><span><?php echo $_REQUEST['msg']; ?></span></div>
+        <?php
+
+      }
+     ?>
   <form action="student_apply_core.php" method="post" enctype="multipart/form-data">
     <div class="mb-2">
       <span><b>1.Personal Info:</b></span>
@@ -163,10 +171,6 @@
       <sup><span style="color:red;">*</span></sup> Required
     </div>
   </form>
-  <?php
-    if(isset($_REQUEST['msg'])){
-      echo $_REQUEST['msg'];
-    }
-   ?>
+
 </div>
 <?php include("footer.php"); ?>
