@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2019 at 10:43 PM
+-- Generation Time: Jul 19, 2019 at 06:33 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -168,8 +168,6 @@ CREATE TABLE `tbl_male_hall_1` (
 --
 
 INSERT INTO `tbl_male_hall_1` (`floor_no`, `flat_no`, `room_no`, `bed_no`, `std_id`) VALUES
-('9', '8(A)', '2', 'A', NULL),
-('9', '8(A)', '2', 'B', NULL),
 ('9', '8(A)', '3', 'A', NULL),
 ('9', '8(A)', '3', 'B', NULL),
 ('9', '8(A)', '3', 'C', NULL),
@@ -363,6 +361,18 @@ CREATE TABLE `tbl_std_info` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_std_login`
+--
+
+CREATE TABLE `tbl_std_login` (
+  `std_id` int(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_std_pa`
 --
 
@@ -478,6 +488,13 @@ ALTER TABLE `tbl_std_info`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `tbl_std_login`
+--
+ALTER TABLE `tbl_std_login`
+  ADD PRIMARY KEY (`std_id`),
+  ADD UNIQUE KEY `user_name` (`user_name`);
+
+--
 -- Indexes for table `tbl_std_pa`
 --
 ALTER TABLE `tbl_std_pa`
@@ -491,31 +508,31 @@ ALTER TABLE `tbl_std_pa`
 -- AUTO_INCREMENT for table `notice_board`
 --
 ALTER TABLE `notice_board`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_assistant_provost`
 --
 ALTER TABLE `tbl_assistant_provost`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_hr`
 --
 ALTER TABLE `tbl_hr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_new_std_info`
 --
 ALTER TABLE `tbl_new_std_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_provost`
 --
 ALTER TABLE `tbl_provost`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_slide_show`
@@ -527,13 +544,13 @@ ALTER TABLE `tbl_slide_show`
 -- AUTO_INCREMENT for table `tbl_staff`
 --
 ALTER TABLE `tbl_staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_std_info`
 --
 ALTER TABLE `tbl_std_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
